@@ -1,31 +1,13 @@
-package ru.sonyabeldy.dictionary.Dictionaty.models;
+package ru.sonyabeldy.dictionary.Dictionaty.dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
 
-@Entity
-@Table(name = "ru_eng_translation")
-public class RuEngTranslation {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
-
-    @Column(name = "origin_text")
+public class RuEngTranslationDTO {
     private String originText;
 
-    @Column(name = "translated_text")
     private String translatedText;
 
-    @Column(name = "context")
     private String context;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getOriginText() {
         return originText;
